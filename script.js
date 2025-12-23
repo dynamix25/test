@@ -1,6 +1,9 @@
 // HostRating - JavaScript Functionality
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Theme
+    initTheme();
+
     // Sticky Header with Glass Effect Enhancement
     initStickyHeader();
 
@@ -15,7 +18,53 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Lazy Loading Animation for Cards
     initCardAnimations();
+
+    // Initialize Pagination
+    initPagination();
 });
+
+/**
+ * Initialize Theme Toggle
+ * Handles dark/light theme switching with localStorage persistence
+ */
+function initTheme() {
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+
+    // Check for saved theme preference or default to system preference
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme) {
+        html.setAttribute('data-theme', savedTheme);
+    } else if (systemPrefersDark) {
+        html.setAttribute('data-theme', 'dark');
+    }
+
+    // Theme toggle click handler
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+
+            // Add animation to toggle button
+            this.style.transform = 'scale(0.9) rotate(180deg)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 300);
+        });
+    }
+
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+            html.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+        }
+    });
+}
 
 /**
  * Initialize Sticky Header
@@ -35,7 +84,7 @@ function initStickyHeader() {
             header.classList.remove('scrolled');
         }
 
-        // Optional: Hide header on scroll down, show on scroll up
+        // Hide header on scroll down, show on scroll up
         if (scrollY > lastScrollY && scrollY > 200) {
             header.style.transform = 'translateY(-100%)';
         } else {
@@ -64,11 +113,11 @@ function initFilterButtons() {
     const filterBtns = document.querySelectorAll('.filter-btn:not(.sort-btn)');
 
     filterBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function(event) {
             // Toggle active state
             this.classList.toggle('active');
 
-            // Close other dropdowns (if implementing dropdown menus)
+            // Close other dropdowns
             filterBtns.forEach(otherBtn => {
                 if (otherBtn !== this) {
                     otherBtn.classList.remove('active');
@@ -90,7 +139,7 @@ function initFilterButtons() {
             if (this.classList.contains('active')) {
                 this.style.borderColor = 'var(--primary-color)';
                 this.style.color = 'var(--primary-color)';
-                this.style.background = 'rgba(124, 179, 66, 0.1)';
+                this.style.background = 'rgba(99, 102, 241, 0.1)';
             } else {
                 this.style.borderColor = '';
                 this.style.color = '';
@@ -118,9 +167,6 @@ function initTariffToggle() {
                 this.innerHTML = '&#8593; скрыть тарифы &#8593;';
                 this.setAttribute('data-expanded', 'true');
             }
-
-            // Here you would show/hide additional tariff rows
-            // For demo purposes, we just toggle the button text
         });
     });
 }
@@ -177,12 +223,45 @@ function initCardAnimations() {
         });
     }, observerOptions);
 
-    cards.forEach(card => {
+    cards.forEach((card, index) => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(30px)';
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
         observer.observe(card);
     });
+}
+
+/**
+ * Initialize Pagination
+ */
+function initPagination() {
+    const pageBtns = document.querySelectorAll('.page-btn');
+
+    pageBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            if (!this.classList.contains('page-dots') && !this.classList.contains('page-next')) {
+                pageBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Show More Button
+    const showMoreBtn = document.querySelector('.show-more-btn');
+    if (showMoreBtn) {
+        showMoreBtn.addEventListener('click', function() {
+            this.innerHTML = 'Загрузка...';
+
+            setTimeout(() => {
+                this.innerHTML = 'Показать ещё';
+            }, 1000);
+        });
+    }
 }
 
 /**
@@ -203,7 +282,7 @@ function createRipple(element, event) {
         height: ${size}px;
         left: ${x}px;
         top: ${y}px;
-        background: rgba(124, 179, 66, 0.3);
+        background: rgba(99, 102, 241, 0.3);
         border-radius: 50%;
         transform: scale(0);
         animation: ripple 0.6s ease-out;
@@ -233,49 +312,12 @@ document.head.appendChild(style);
 
 /**
  * Discount Modal Handler
- * Opens discount/promo code modal when clicking discount buttons
  */
 document.addEventListener('click', function(e) {
     if (e.target.classList.contains('discount-btn')) {
-        // Here you would open a modal with discount information
         console.log('Discount button clicked - implement modal');
     }
 });
-
-/**
- * Pagination Handler
- */
-const pageBtns = document.querySelectorAll('.page-btn');
-pageBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-        if (!this.classList.contains('page-dots')) {
-            pageBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-
-            // Here you would load new page content
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-/**
- * Show More Button Handler
- */
-const showMoreBtn = document.querySelector('.show-more-btn');
-if (showMoreBtn) {
-    showMoreBtn.addEventListener('click', function() {
-        this.innerHTML = 'Загрузка...';
-
-        // Simulate loading
-        setTimeout(() => {
-            this.innerHTML = 'Показать ещё';
-            // Here you would load more providers
-        }, 1000);
-    });
-}
 
 /**
  * Provider Card Hover Effects
@@ -283,7 +325,7 @@ if (showMoreBtn) {
 const providerCards = document.querySelectorAll('.provider-card');
 providerCards.forEach(card => {
     card.addEventListener('mouseenter', function() {
-        this.style.boxShadow = 'var(--shadow-lg)';
+        this.style.boxShadow = 'var(--shadow-xl)';
     });
 
     card.addEventListener('mouseleave', function() {
@@ -307,5 +349,5 @@ ratingBlocks.forEach(block => {
 });
 
 // Console welcome message
-console.log('%c HostRating ', 'background: #7cb342; color: white; font-size: 20px; padding: 10px 20px; border-radius: 8px;');
-console.log('%c Рейтинг хостингов с 2024 года ', 'color: #666; font-size: 12px;');
+console.log('%c HostRating ', 'background: linear-gradient(135deg, #667eea, #764ba2); color: white; font-size: 20px; padding: 10px 20px; border-radius: 8px;');
+console.log('%c Рейтинг хостингов ', 'color: #64748b; font-size: 12px;');
