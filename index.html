@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HostRating - Рейтинг хостингов</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">&#9733;</span>
+                <span class="logo-text">HostRating</span>
+                <span class="logo-badge">с 2024 года</span>
+            </div>
+            <nav class="nav">
+                <a href="#" class="nav-link active">Виртуальный хостинг</a>
+                <a href="#" class="nav-link">VPS / VDS</a>
+                <a href="#" class="nav-link">Выделенные серверы</a>
+                <a href="#" class="nav-link">Домены</a>
+            </nav>
+            <div class="header-actions">
+                <div class="currency-selector">
+                    <span>&#8381; RUB</span>
+                </div>
+                <a href="#" class="contact-link">Связаться с нами</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Рейтинг хостингов</h1>
+                <div class="hero-stats">
+                    <span class="stat-badge">115 компаний</span>
+                    <p>Подборка лучших хостинг-провайдеров, предлагающих услуги виртуального хостинга</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Filters -->
+        <section class="quick-filters">
+            <div class="container">
+                <span class="filters-label">&#9788; популярно:</span>
+                <div class="filter-tags">
+                    <a href="#" class="filter-tag">с пробным периодом</a>
+                    <a href="#" class="filter-tag">до 150 руб.</a>
+                    <a href="#" class="filter-tag">принимает крипту</a>
+                    <a href="#" class="filter-tag">с промокодом</a>
+                    <a href="#" class="filter-tag">конструктор сайтов</a>
+                    <a href="#" class="filter-tag">бесплатный домен .RU</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Filters -->
+        <section class="advanced-filters">
+            <div class="container">
+                <div class="filters-row">
+                    <button class="filter-btn">
+                        <span class="filter-icon">&#127758;</span>
+                        <span>Страна</span>
+                        <span class="arrow">&#9660;</span>
+                    </button>
+                    <button class="filter-btn">
+                        <span class="filter-icon">&#8381;</span>
+                        <span>Стоимость</span>
+                        <span class="arrow">&#9660;</span>
+                    </button>
+                    <button class="filter-btn">
+                        <span class="filter-icon">&#9881;</span>
+                        <span>Тариф</span>
+                        <span class="arrow">&#9660;</span>
+                    </button>
+                    <button class="filter-btn">
+                        <span class="filter-icon">&#9776;</span>
+                        <span>Параметры</span>
+                        <span class="arrow">&#9660;</span>
+                    </button>
+                    <button class="filter-btn">
+                        <span class="filter-icon">&#10003;</span>
+                        <span>Полезные опции</span>
+                        <span class="arrow">&#9660;</span>
+                    </button>
+                    <button class="filter-btn sort-btn active">
+                        <span class="filter-icon">&#8645;</span>
+                        <span>Сортировка</span>
+                        <span class="sort-value">по рейтингу</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hosting List -->
+        <section class="hosting-list">
+            <div class="container">
+                <!-- Provider 1: Beget -->
+                <div class="provider-card">
+                    <div class="provider-header">
+                        <div class="provider-info">
+                            <div class="provider-badge">лучший хостинг</div>
+                            <div class="provider-logo beget">
+                                <span class="logo-symbol">8</span>
+                            </div>
+                            <div class="provider-details">
+                                <h2 class="provider-name">Beget</h2>
+                                <a href="#" class="provider-url">beget.com</a>
+                            </div>
+                            <div class="trial-badge">
+                                <span>&#10003;</span> 30 дн. тестовый хостинг
+                            </div>
+                        </div>
+                        <div class="provider-stats">
+                            <div class="rating-block">
+                                <div class="rating-label">&#9733; Рейтинг</div>
+                                <div class="rating-value">9.7</div>
+                                <div class="rating-stars">&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="meta-block">
+                                <div class="meta-item">
+                                    <span class="meta-icon">&#128205;</span>
+                                    <span>Россия</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-icon">&#128197;</span>
+                                    <span>С 2007 года</span>
+                                </div>
+                            </div>
+                            <div class="overview-block glass-effect">
+                                <span class="overview-icon">&#128196;</span>
+                                <span>обзор</span>
+                            </div>
+                            <div class="reviews-block">
+                                <span class="reviews-count">273</span>
+                                <span class="reviews-label">отзывы</span>
+                            </div>
+                            <div class="price-block">
+                                <div class="price-label">Стоимость хостинга:</div>
+                                <div class="price-value">от <strong>280 &#8381;</strong> / мес.</div>
+                                <a href="#" class="tariffs-link">тарифы</a>
+                            </div>
+                            <div class="uptime-block">
+                                <div class="uptime-icon">&#9200;</div>
+                                <div class="uptime-info">
+                                    <div class="uptime-label">В ноябре</div>
+                                    <div class="uptime-value success">100%</div>
+                                    <div class="uptime-note">был всегда доступен</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="provider-review glass-effect">
+                        <div class="review-source">слетать.ру</div>
+                        <p class="review-text">Любые вопросы в поддержку решаются очень быстро. <strong>Отличное соотношение цены и стабильности!</strong> Сервису желаем процветания и развития!</p>
+                    </div>
+                    <div class="provider-features">
+                        <span class="feature-tag">IPv4 158 &#8381; / мес. ?</span>
+                        <span class="feature-tag success">&#10003; возврат остатка ?</span>
+                        <span class="feature-tag success">&#10003; история тарифов ?</span>
+                    </div>
+                    <div class="tariffs-table">
+                        <div class="table-header">
+                            <span>тариф</span>
+                            <span>сайтов</span>
+                            <span>диск</span>
+                            <span>базы данных</span>
+                            <span>стоимость</span>
+                        </div>
+                        <div class="tariff-row">
+                            <div class="tariff-name">
+                                <span class="flag">&#127479;&#127482;</span>
+                                <span>Note</span>
+                                <span class="ssl-badge">SSL</span>
+                            </div>
+                            <div class="tariff-sites">2 шт.</div>
+                            <div class="tariff-disk">5 Гб <span class="disk-type">NVM</span></div>
+                            <div class="tariff-db">неогранич.</div>
+                            <div class="tariff-price"><strong>280 &#8381;</strong> / мес. <span class="discount-btn">%</span></div>
+                        </div>
+                        <div class="tariff-row">
+                            <div class="tariff-name">
+                                <span class="flag">&#127479;&#127482;</span>
+                                <span>Blog</span>
+                                <span class="ssl-badge">SSL</span>
+                            </div>
+                            <div class="tariff-sites">5 шт.</div>
+                            <div class="tariff-disk">12 Гб <span class="disk-type">NVM</span></div>
+                            <div class="tariff-db">неогранич.</div>
+                            <div class="tariff-price"><strong>520 &#8381;</strong> / мес. <span class="discount-btn">%</span></div>
+                        </div>
+                        <div class="tariff-row">
+                            <div class="tariff-name">
+                                <span class="flag">&#127479;&#127482;</span>
+                                <span>Start</span>
+                                <span class="ssl-badge">SSL</span>
+                            </div>
+                            <div class="tariff-sites">12 шт.</div>
+                            <div class="tariff-disk">35 Гб <span class="disk-type">NVM</span></div>
+                            <div class="tariff-db">неогранич.</div>
+                            <div class="tariff-price"><strong>740 &#8381;</strong> / мес. <span class="discount-btn">%</span></div>
+                        </div>
+                        <div class="tariff-row">
+                            <div class="tariff-name">
+                                <span class="flag">&#127479;&#127482;</span>
+                                <span>Noble</span>
+                                <span class="ssl-badge">SSL</span>
+                            </div>
+                            <div class="tariff-sites">20 шт.</div>
+                            <div class="tariff-disk">45 Гб <span class="disk-type">NVM</span></div>
+                            <div class="tariff-db">неогранич.</div>
+                            <div class="tariff-price"><strong>820 &#8381;</strong> / мес. <span class="discount-btn">%</span></div>
+                        </div>
+                        <div class="tariff-row">
+                            <div class="tariff-name">
+                                <span class="flag">&#127479;&#127482;</span>
+                                <span>Great</span>
+                                <span class="ssl-badge">SSL</span>
+                            </div>
+                            <div class="tariff-sites">35 шт.</div>
+                            <div class="tariff-disk">55 Гб <span class="disk-type">NVM</span></div>
+                            <div class="tariff-db">неогранич.</div>
+                            <div class="tariff-price"><strong>980 &#8381;</strong> / мес. <span class="discount-btn">%</span></div>
+                        </div>
+                    </div>
+                    <button class="show-more-tariffs">&#8595; ещё 3 тарифа &#8595;</button>
+                </div>
+
+                <!-- Provider 2: TimeWeb -->
+                <div class="provider-card">
+                    <div class="provider-header">
+                        <div class="provider-info">
+                            <div class="provider-badge">лучший хостинг</div>
+                            <div class="provider-logo timeweb">
+                                <span class="logo-symbol">&gt;</span>
+                            </div>
+                            <div class="provider-details">
+                                <h2 class="provider-name">TimeWeb</h2>
+                                <a href="#" class="provider-url">timeweb.com</a>
+                            </div>
+                            <div class="trial-badge">
+                                <span>&#10003;</span> 10 дн. тестовый хостинг
+                            </div>
+                        </div>
+                        <div class="provider-stats">
+                            <div class="rating-block">
+                                <div class="rating-label">&#9733; Рейтинг</div>
+                                <div class="rating-value">9.5</div>
+                                <div class="rating-stars">&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="meta-block">
+                                <div class="meta-item">
+                                    <span class="meta-icon">&#128205;</span>
+                                    <span>Россия</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-icon">&#128197;</span>
+                                    <span>С 2006 года</span>
+                                </div>
+                            </div>
+                            <div class="overview-block glass-effect">
+                                <span class="overview-icon">&#128196;</span>
+                                <span>обзор</span>
+                            </div>
+                            <div class="reviews-block">
+                                <span class="reviews-count">305</span>
+                                <span class="reviews-label">отзывы</span>
+                            </div>
+                            <div class="price-block">
+                                <div class="price-label">Стоимость хостинга:</div>
+                                <div class="price-value">от <strong>393 &#8381;</strong> / мес.</div>
+                                <a href="#" class="tariffs-link">тарифы</a>
+                            </div>
+                            <div class="uptime-block">
+                                <div class="uptime-icon">&#9200;</div>
+                                <div class="uptime-info">
+                                    <div class="uptime-label">В ноябре</div>
+                                    <div class="uptime-value success">99.99%</div>
+                                    <div class="uptime-note">был недоступен 6 мин.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="provider-review glass-effect">
+                        <div class="review-source">СТМЭГИ</div>
+                        <p class="review-text">Чинили в рамках суток. <strong>Довольно быстрый, SSD диски, неплохие процессоры и достаточно оперативки.</strong> Тут нареканий нет. Минусы - техподдержка.</p>
+                    </div>
+                    <div class="provider-features">
+                        <span class="feature-tag warning">Защита от DDoS платно ?</span>
+                        <span class="feature-tag">IPv4 150 &#8381; / мес. ?</span>
+                        <span class="feature-tag success">&#10003; возврат остатка ?</span>
+                        <span class="feature-tag success">&#10003; история тарифов ?</span>
+                    </div>
+                    <div class="tariffs-table">
+                        <div class="table-header">
+                            <span>тариф</span>
+                            <span>сайтов</span>
+                            <span>диск</span>
+                            <span>базы данных</span>
+                            <span>стоимость</span>
+                        </div>
+                        <div class="tariff-row">
+                            <div class="tariff-name">
+                                <span class="flag">&#127479;&#127482;</span>
+                                <span>Year</span>
+                                <span class="ssl-badge">SSL</span>
+                            </div>
+                            <div class="tariff-sites">2 шт.</div>
+                            <div class="tariff-disk">15 Гб <span class="disk-type">NVM</span></div>
+                            <div class="tariff-db">2 БД</div>
+                            <div class="tariff-price"><strong>393 &#8381;</strong> / мес. <span class="discount-btn">%</span></div>
+                        </div>
+                        <div class="tariff-row">
+                            <div class="tariff-name">
+                                <span class="flag">&#127479;&#127482;</span>
+                                <span>Optimo</span>
+                                <span class="ssl-badge">SSL</span>
+                            </div>
+                            <div class="tariff-sites">15 шт.</div>
+                            <div class="tariff-disk">40 Гб <span class="disk-type">NVM</span></div>
+                            <div class="tariff-db">неогранич.</div>
+                            <div class="tariff-price"><strong>634 &#8381;</strong> / мес. <span class="discount-btn">%</span></div>
+                        </div>
+                        <div class="tariff-row">
+                            <div class="tariff-name">
+                                <span class="flag">&#127479;&#127482;</span>
+                                <span>Century</span>
+                                <span class="ssl-badge">SSL</span>
+                            </div>
+                            <div class="tariff-sites">35 шт.</div>
+                            <div class="tariff-disk">50 Гб <span class="disk-type">NVM</span></div>
+                            <div class="tariff-db">неогранич.</div>
+                            <div class="tariff-price"><strong>887 &#8381;</strong> / мес. <span class="discount-btn">%</span></div>
+                        </div>
+                        <div class="tariff-row">
+                            <div class="tariff-name">
+                                <span class="flag">&#127479;&#127482;</span>
+                                <span>Millennium</span>
+                                <span class="ssl-badge">SSL</span>
+                            </div>
+                            <div class="tariff-sites">60 шт.</div>
+                            <div class="tariff-disk">60 Гб <span class="disk-type">NVM</span></div>
+                            <div class="tariff-db">неогранич.</div>
+                            <div class="tariff-price"><strong>1 285 &#8381;</strong> / мес. <span class="discount-btn">%</span></div>
+                        </div>
+                    </div>
+                    <button class="show-more-tariffs">&#8595; ещё 4 тарифа &#8595;</button>
+                </div>
+
+                <!-- Provider 3: HostLand -->
+                <div class="provider-card">
+                    <div class="provider-header">
+                        <div class="provider-info">
+                            <div class="provider-badge">лучший хостинг</div>
+                            <div class="provider-logo hostland">
+                                <span class="logo-symbol">+</span>
+                            </div>
+                            <div class="provider-details">
+                                <h2 class="provider-name">HostLand</h2>
+                                <a href="#" class="provider-url">hostland.ru</a>
+                            </div>
+                            <div class="trial-badge">
+                                <span>&#10003;</span> 30 дн. тестовый хостинг
+                            </div>
+                        </div>
+                        <div class="provider-stats">
+                            <div class="rating-block">
+                                <div class="rating-label">&#9733; Рейтинг</div>
+                                <div class="rating-value">9.3</div>
+                                <div class="rating-stars">&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="meta-block">
+                                <div class="meta-item">
+                                    <span class="meta-icon">&#128205;</span>
+                                    <span>Россия</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-icon">&#128197;</span>
+                                    <span>С 2003 года</span>
+                                </div>
+                            </div>
+                            <div class="overview-block glass-effect">
+                                <span class="overview-icon">&#128196;</span>
+                                <span>обзор</span>
+                            </div>
+                            <div class="reviews-block">
+                                <span class="reviews-count">239</span>
+                                <span class="reviews-label">отзывы</span>
+                            </div>
+                            <div class="price-block">
+                                <div class="price-label">Стоимость хостинга:</div>
+                                <div class="price-value">от <strong>249 &#8381;</strong> / мес.</div>
+                                <a href="#" class="tariffs-link">тарифы</a>
+                            </div>
+                            <div class="uptime-block">
+                                <div class="uptime-icon">&#9200;</div>
+                                <div class="uptime-info">
+                                    <div class="uptime-label">В ноябре</div>
+                                    <div class="uptime-value success">99.99%</div>
+                                    <div class="uptime-note">был недоступен 3 мин.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="provider-review glass-effect">
+                        <div class="review-source">PRISMA</div>
+                        <p class="review-text"><strong>Отличный хост.</strong> Рекомендую. Но нашему маркету пришлось съехать на собственные мощности (потому что "политика партии"). Спасибо hostland!</p>
+                    </div>
+                    <div class="provider-features">
+                        <span class="feature-tag success">Защита от DDoS &#10003; бесплатно ?</span>
+                        <span class="feature-tag">30 дн. полный манибек ?</span>
+                        <span class="feature-tag success">&#10003; возврат остатка ?</span>
+                        <span class="feature-tag success">&#10003; история тарифов ?</span>
+                    </div>
+                    <div class="tariffs-table">
+                        <div class="table-header">
+                            <span>тариф</span>
+                            <span>сайтов</span>
+                            <span>диск</span>
+                            <span>базы данных</span>
+                            <span>стоимость</span>
+                        </div>
+                        <div class="tariff-row">
+                            <div class="tariff-name">
+                                <span class="flag">&#127479;&#127482;</span>
+                                <span>Green</span>
+                                <span class="ssl-badge">SSL</span>
+                            </div>
+                            <div class="tariff-sites">2 шт.</div>
+                            <div class="tariff-disk">10 Гб <span class="disk-type">NVM</span></div>
+                            <div class="tariff-db">неогранич.</div>
+                            <div class="tariff-price"><strong>249 &#8381;</strong> / мес. <span class="discount-btn">%</span></div>
+                        </div>
+                        <div class="tariff-row">
+                            <div class="tariff-name">
+                                <span class="flag">&#127479;&#127482;</span>
+                                <span>Red</span>
+                                <span class="ssl-badge">SSL</span>
+                            </div>
+                            <div class="tariff-sites">10 шт.</div>
+                            <div class="tariff-disk">30 Гб <span class="disk-type">NVM</span></div>
+                            <div class="tariff-db">неогранич.</div>
+                            <div class="tariff-price"><strong>372 &#8381;</strong> / мес. <span class="discount-btn">%</span></div>
+                        </div>
+                        <div class="tariff-row">
+                            <div class="tariff-name">
+                                <span class="flag">&#127479;&#127482;</span>
+                                <span>Black</span>
+                                <span class="ssl-badge">SSL</span>
+                            </div>
+                            <div class="tariff-sites">25 шт.</div>
+                            <div class="tariff-disk">40 Гб <span class="disk-type">NVM</span></div>
+                            <div class="tariff-db">неогранич.</div>
+                            <div class="tariff-price"><strong>521 &#8381;</strong> / мес. <span class="discount-btn">%</span></div>
+                        </div>
+                        <div class="tariff-row">
+                            <div class="tariff-name">
+                                <span class="flag">&#127479;&#127482;</span>
+                                <span>Космос-1</span>
+                                <span class="ssl-badge">SSL</span>
+                            </div>
+                            <div class="tariff-sites">неогранич.</div>
+                            <div class="tariff-disk">50 Гб <span class="disk-type">SSD</span></div>
+                            <div class="tariff-db">неогранич.</div>
+                            <div class="tariff-price"><strong>734 &#8381;</strong> / мес. <span class="discount-btn">%</span></div>
+                        </div>
+                    </div>
+                    <button class="show-more-tariffs">&#8595; ещё 2 тарифа &#8595;</button>
+                </div>
+
+                <!-- Provider 4: SmartApe -->
+                <div class="provider-card">
+                    <div class="provider-header">
+                        <div class="provider-info">
+                            <div class="provider-badge">лучший хостинг</div>
+                            <div class="provider-logo smartape">
+                                <span class="logo-symbol">&#128053;</span>
+                            </div>
+                            <div class="provider-details">
+                                <h2 class="provider-name">SmartApe</h2>
+                                <a href="#" class="provider-url">smartape.ru</a>
+                            </div>
+                            <div class="trial-badge">
+                                <span>&#10003;</span> 7 дн. тестовый хостинг
+                            </div>
+                        </div>
+                        <div class="provider-stats">
+                            <div class="rating-block">
+                                <div class="rating-label">&#9733; Рейтинг</div>
+                                <div class="rating-value">8.8</div>
+                                <div class="rating-stars">&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="meta-block">
+                                <div class="meta-item">
+                                    <span class="meta-icon">&#128205;</span>
+                                    <span>Россия</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-icon">&#128197;</span>
+                                    <span>С 2012 года</span>
+                                </div>
+                            </div>
+                            <div class="overview-block glass-effect">
+                                <span class="overview-icon">&#128196;</span>
+                                <span>обзор</span>
+                            </div>
+                            <div class="reviews-block">
+                                <span class="reviews-count">75</span>
+                                <span class="reviews-label">отзывы</span>
+                            </div>
+                            <div class="price-block">
+                                <div class="price-label">Стоимость хостинга:</div>
+                                <div class="price-value">от <strong>295 &#8381;</strong> / мес.</div>
+                                <a href="#" class="tariffs-link">тарифы</a>
+                            </div>
+                            <div class="uptime-block">
+                                <div class="uptime-icon">&#9200;</div>
+                                <div class="uptime-info">
+                                    <div class="uptime-label">В ноябре</div>
+                                    <div class="uptime-value warning">99.98%</div>
+                                    <div class="uptime-note">был недоступен 9 мин.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="provider-features">
+                        <span class="feature-tag success">Защита от DDoS &#10003; бесплатно ?</span>
+                        <span class="feature-tag">IPv4 100 &#8381; / мес. ?</span>
+                        <span class="feature-tag success">&#10003; возврат остатка ?</span>
+                    </div>
+                    <div class="tariffs-table">
+                        <div class="table-header">
+                            <span>тариф</span>
+                            <span>сайтов</span>
+                            <span>диск</span>
+                            <span>базы данных</span>
+                            <span>стоимость</span>
+                        </div>
+                        <div class="tariff-row">
+                            <div class="tariff-name">
+                                <span class="flag">&#127479;&#127482;</span>
+                                <span>Старт</span>
+                                <span class="ssl-badge">SSL</span>
+                            </div>
+                            <div class="tariff-sites">1 шт.</div>
+                            <div class="tariff-disk">5 Гб <span class="disk-type">SSD</span></div>
+                            <div class="tariff-db">1 БД</div>
+                            <div class="tariff-price"><strong>295 &#8381;</strong> / мес. <span class="discount-btn">%</span></div>
+                        </div>
+                        <div class="tariff-row">
+                            <div class="tariff-name">
+                                <span class="flag">&#127479;&#127482;</span>
+                                <span>Базовый</span>
+                                <span class="ssl-badge">SSL</span>
+                            </div>
+                            <div class="tariff-sites">5 шт.</div>
+                            <div class="tariff-disk">10 Гб <span class="disk-type">SSD</span></div>
+                            <div class="tariff-db">5 БД</div>
+                            <div class="tariff-price"><strong>495 &#8381;</strong> / мес. <span class="discount-btn">%</span></div>
+                        </div>
+                        <div class="tariff-row">
+                            <div class="tariff-name">
+                                <span class="flag">&#127479;&#127482;</span>
+                                <span>Оптимальный</span>
+                                <span class="ssl-badge">SSL</span>
+                            </div>
+                            <div class="tariff-sites">10 шт.</div>
+                            <div class="tariff-disk">20 Гб <span class="disk-type">SSD</span></div>
+                            <div class="tariff-db">10 БД</div>
+                            <div class="tariff-price"><strong>795 &#8381;</strong> / мес. <span class="discount-btn">%</span></div>
+                        </div>
+                    </div>
+                    <button class="show-more-tariffs">&#8595; ещё 2 тарифа &#8595;</button>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <span class="page-dots">..</span>
+                    <button class="page-btn">12</button>
+                    <button class="page-btn page-next">&#8594;</button>
+                </div>
+
+                <!-- Show More Button -->
+                <button class="show-more-btn glass-effect">Показать ещё</button>
+            </div>
+        </section>
+
+        <!-- Info Section -->
+        <section class="info-section">
+            <div class="container">
+                <div class="info-content">
+                    <p>На этой странице представлен рейтинг провайдеров виртуального хостинга. Мы собрали информацию о различных хостинговых компаниях, их тарифах, характеристиках и отзывы пользователей, чтобы помочь вам сделать осознанный выбор.</p>
+                    <p><strong>Виртуальный хостинг (shared hosting)</strong> — это самый популярный и доступный вид хостинга, идеально подходящий для большинства веб-сайтов: от личных блогов и сайтов-визиток до небольших интернет-магазинов и форумов.</p>
+                    <p>При выборе виртуального хостинга важно обращать внимание на ряд ключевых параметров: доступное дисковое пространство, количество сайтов и баз данных, поддерживаемые технологии (PHP, MySQL, Python и т.д.), наличие SSL-сертификата, удобство панели управления и, конечно, качество технической поддержки.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Хостинг</h4>
+                    <a href="#">Дешевый хостинг</a>
+                    <a href="#">Дешевый VPS / VDS</a>
+                    <a href="#">Дешевый выделенный сервер</a>
+                    <a href="#">Хостинг с тестовым периодом</a>
+                    <a href="#">VPS с тестовым периодом</a>
+                </div>
+                <div class="footer-col">
+                    <h4>VPS</h4>
+                    <a href="#">Русский VPS</a>
+                    <a href="#">Европейский VPS</a>
+                    <a href="#">Казахстанский VPS</a>
+                    <a href="#">VPS с высоким аптаймом</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Домены</h4>
+                    <a href="#">Промокоды на VPS</a>
+                    <a href="#">Бесплатный домен с хостингом</a>
+                    <a href="#">Бесплатный хостинг</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Информация</h4>
+                    <a href="#">Все хостинги</a>
+                    <a href="#">Статьи</a>
+                    <a href="#">Политика обработки данных</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HostRating. Содержание сайта не является рекомендацией или офертой и носит информационно-справочный характер.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
